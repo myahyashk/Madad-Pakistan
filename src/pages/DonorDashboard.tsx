@@ -1,0 +1,27 @@
+import React, { useEffect, useState } from 'react';
+import { CircleDollarSign, RefreshCw, Send, WalletCards } from 'lucide-react';
+import { reliefApi } from '../backend/reliefApi';
+import { DonorContribution } from '../types/relief';
+import { AuthUser } from '../store/authStore';
+
+export const DonorDashboard: React.FC<{ user: AuthUser; onBackToHome: () => void }> = ({ user, onBackToHome }) => {
+  const [contributions, setContributions] = useState<DonorContribution[]>([]);
+  const [amount, setAmount] = useState('50000');
+  const [targetArea, setTargetArea] = useState('Dadu / Mehar');
+  const [purpose, setPurpose] = useState<DonorContribution['purpose']>('shelter');
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
+
+  const load = async () => { setLoading(true); setContributions(await reliefApi.getDonorContributions(user.organizationId || '')); setLoading(false); };
+  useEffect(() => { load(); }, [user.organizationId]);
+
+  const addContribution = async (event: React.FormEvent) => {
+    event.preventDefault(); setSaving(true);
+    const created = await reliefApi.createDonorContribution({ donorOrganizationId: user.organizationId || '', donorEmail: user.email, donorName: user.organizationName, amountPKR: Number(amount), targetArea, purpose });
+    setContributions(current => [created, ...current]); setSaving(false);
+  };
+
+  return <main className="min-h-screen bg-[#FAF8F5] px-4 py-8 sm:px-6 lg:px-8"><div className="mx-auto max-w-7xl space-y-6"><div className="flex flex-col gap-4 border-b border-stone-200 pb-6 sm:flex-row sm:items-end sm:justify-between"><div><button onClick={onBackToHome} className="mb-3 text-xs font-semibold text-[#0F3A5D] hover:underline">Back to public portal</button><p className="text-[11px] font-bold uppercase tracking-[0.18em] text-amber-700">Private donor desk</p><h1 className="mt-1 text-3xl font-serif font-bold text-[#0F3A5D]">{user.organizationName}</h1><p className="mt-2 text-sm text-stone-600">Sirf aapki donations, pledges aur target areas yahan show hote hain.</p></div><button onClick={load} className="inline-flex items-center gap-2 rounded-xl bg-[#0F3A5D] px-4 py-2.5 text-xs font-bold text-white"><RefreshCw className={`h-4 w-4 ${loading ? 'animate-spin' : ''}`} /> Live refresh</button></div><div className="grid grid-cols-2 gap-3 sm:grid-cols-3"><Metric icon={WalletCards} label="Your contributions" value={contributions.length} /><Metric icon={CircleDollarSign} label="Total PKR" value={contributions.reduce((sum, item) => sum + item.amountPKR, 0)} /><Metric icon={Send} label="Allocated" value={contributions.filter(item => item.status === 'allocated').length} /></div><section className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr]"><form onSubmit={addContribution} className="space-y-4 rounded-2xl border border-stone-200 bg-white p-6"><h2 className="text-lg font-serif font-bold text-[#0F3A5D]">Add dummy contribution</h2><label className="block text-xs font-semibold">Amount PKR<input required min="1" type="number" value={amount} onChange={event => setAmount(event.target.value)} className="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2" /></label><label className="block text-xs font-semibold">Target area<input required value={targetArea} onChange={event => setTargetArea(event.target.value)} className="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2" /></label><label className="block text-xs font-semibold">Purpose<select value={purpose} onChange={event => setPurpose(event.target.value as DonorContribution['purpose'])} className="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2"><option value="shelter">Shelter</option><option value="water">Water</option><option value="food">Food</option><option value="medical">Medical</option></select></label><button disabled={saving} className="w-full rounded-lg bg-emerald-700 px-3 py-2.5 text-xs font-bold text-white disabled:opacity-60">{saving ? 'Saving...' : 'Save dummy contribution'}</button></form><section className="overflow-x-auto rounded-2xl border border-stone-200 bg-white"><div className="border-b border-stone-100 px-5 py-4"><h2 className="text-lg font-serif font-bold text-[#0F3A5D]">Your live contribution feed</h2></div><table className="min-w-full text-left text-xs"><thead className="bg-stone-100 text-[10px] uppercase tracking-wider text-stone-500"><tr><th className="px-4 py-3">ID</th><th className="px-4 py-3">Target</th><th className="px-4 py-3">Purpose</th><th className="px-4 py-3">PKR</th><th className="px-4 py-3">Status</th></tr></thead><tbody className="divide-y divide-stone-100">{contributions.map(item => <tr key={item.id}><td className="px-4 py-4 font-semibold">{item.id}</td><td className="px-4 py-4">{item.targetArea}</td><td className="px-4 py-4">{item.purpose}</td><td className="px-4 py-4">{item.amountPKR.toLocaleString()}</td><td className="px-4 py-4 font-semibold text-emerald-700">{item.status}</td></tr>)}</tbody></table></section></section></div></main>;
+};
+
+const Metric: React.FC<{ icon: React.ElementType; label: string; value: number }> = ({ icon: Icon, label, value }) => <div className="rounded-xl border border-stone-200 bg-white p-4"><Icon className="h-4 w-4 text-[#0F3A5D]" /><p className="mt-3 text-xl font-bold">{value.toLocaleString()}</p><p className="text-[11px] text-stone-500">{label}</p></div>;

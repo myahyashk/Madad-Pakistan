@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #FAF8F5;
+    color: #1C1917;
+  }
+  
+  .font-editorial {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-sans-body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom Scrollbar for Institutional Polish */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3EFEA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8D2C6;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A8A29E;
+}
+
+/* Smooth hair-line borders and transitions */
+.hairline-b {
+  border-bottom: 1px solid rgba(28, 25, 23, 0.08);
+}
+
+.hairline-t {
+  border-top: 1px solid rgba(28, 25, 23, 0.08);
+}
+
+.hairline-box {
+  border: 1px solid rgba(28, 25, 23, 0.09);
+}
+
+/* Tabular figures for all statistical disclosures and ledgers */
+.num-tabular {
+  font-variant-numeric: tabular-nums;
+}
