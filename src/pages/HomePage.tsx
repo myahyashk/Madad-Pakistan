@@ -131,7 +131,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               Indigenous Flood Engineering
             </div>
             <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#0F3A5D]">
-              How FloodAids Rebuilds Rural Pakistan
+              How MADAD PAKISTAN Rebuilds Rural Pakistan
             </h2>
             <p className="text-stone-600 text-xs sm:text-sm max-w-xl font-sans">
               Replacing fragile mud-brick katcha dwellings with 3-meter elevated bamboo and timber stilt homes that withstand torrential flash floods.

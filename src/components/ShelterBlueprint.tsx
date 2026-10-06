@@ -24,7 +24,7 @@ export const ShelterBlueprint: React.FC<ShelterBlueprintProps> = ({ onFundModel 
             The 3-Phase Rural Rehousing Blueprint
           </h2>
           <p className="text-stone-600 text-sm sm:text-base leading-relaxed font-sans">
-            Traditional mud (<em className="text-stone-900 font-medium not-italic">katcha</em>) houses liquefy into mud during flash deluges. FloodAids engineers elevated timber-and-bamboo <strong className="text-stone-900 font-semibold">Machan</strong> structures built 3 meters above historic high-water contours, keeping rural families, children, and livestock safe and dry.
+            Traditional mud (<em className="text-stone-900 font-medium not-italic">katcha</em>) houses liquefy into mud during flash deluges. Madad Pakistan engineers elevated timber-and-bamboo <strong className="text-stone-900 font-semibold">Machan</strong> structures built 3 meters above historic high-water contours, keeping rural families, children, and livestock safe and dry.
           </p>
         </div>
 

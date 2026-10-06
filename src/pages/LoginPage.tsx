@@ -4,7 +4,7 @@ import { DEMO_ACCOUNTS, useAuthStore } from '../store/authStore';
 
 export const LoginPage: React.FC<{ onContinuePublic?: () => void }> = ({ onContinuePublic }) => {
   const login = useAuthStore(state => state.login);
-  const [email, setEmail] = useState('admin@floodaids.local');
+  const [email, setEmail] = useState('admin@madadpk.local');
   const [password, setPassword] = useState('admin123');
   const [error, setError] = useState('');
 
@@ -17,9 +17,9 @@ export const LoginPage: React.FC<{ onContinuePublic?: () => void }> = ({ onConti
     <main className="min-h-screen bg-[#FAF8F5] px-4 py-10 text-stone-900 sm:px-6">
       <div className="mx-auto grid max-w-5xl overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-xl lg:grid-cols-[1.05fr_1fr]">
         <section className="bg-[#0F3A5D] p-8 text-white sm:p-12">
-          <div className="flex items-center gap-2 text-amber-300"><ShieldCheck className="h-5 w-5" /><span className="text-xs font-bold uppercase tracking-[0.18em]">FloodAids Pakistan</span></div>
+          <div className="flex items-center gap-2 text-amber-300"><ShieldCheck className="h-5 w-5" /><span className="text-xs font-bold uppercase tracking-[0.18em]">MADAD PAKISTAN</span></div>
           <h1 className="mt-16 max-w-md text-4xl font-serif font-bold leading-tight">Har organization ka apna secure relief view.</h1>
-          <p className="mt-5 max-w-md text-sm leading-6 text-stone-200">NGO, government scheme, private donor aur admin ke records alag scope mein dummy login ke zariye show hote hain.</p>
+          <p className="mt-5 max-w-md text-sm leading-6 text-stone-200">NGO, government scheme, private donor aur admin ke records alag scope mein demo login ke zariye show hote hain.</p>
         </section>
         <section className="p-8 sm:p-12">
           <div className="mb-8"><p className="text-xs font-bold uppercase tracking-wider text-amber-700">Demo access</p><h2 className="mt-2 text-2xl font-serif font-bold text-[#0F3A5D]">Sign in to your organization</h2></div>

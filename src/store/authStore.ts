@@ -14,7 +14,7 @@ export interface AuthUser {
 }
 
 export const DEMO_ACCOUNTS: Array<AuthUser & { password: string }> = [
-  { email: 'admin@floodaids.local', password: 'admin123', role: 'admin', organizationName: 'FloodAids Admin' },
+  { email: 'admin@madadpk.local', password: 'admin123', role: 'admin', organizationName: 'Madad Pakistan Admin' },
   { email: 'ngo@prcs.local', password: 'ngo123', role: 'partner', organizationType: 'ngo', organizationId: 'prcs', organizationName: 'Pakistan Red Crescent Society' },
   { email: 'government@pdma.local', password: 'gov123', role: 'partner', organizationType: 'government', organizationId: 'pdma-sindh', organizationName: 'PDMA Sindh Relief Scheme' },
   { email: 'donor@community.local', password: 'donor123', role: 'partner', organizationType: 'private_donor', organizationId: 'community-donors', organizationName: 'Community Private Donors' }

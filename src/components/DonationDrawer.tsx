@@ -313,7 +313,7 @@ export const DonationDrawer: React.FC<DonationDrawerProps> = ({
               <div className="flex items-center justify-between border-b border-stone-200 pb-2">
                 <div className="flex items-center gap-1.5">
                   <Building2 className="w-4 h-4 text-[#0F3A5D]" />
-                  <span className="font-serif font-bold text-sm text-[#0F3A5D]">FLOODAIDS PAKISTAN OFFICIAL TAX RECEIPT</span>
+                  <span className="font-serif font-bold text-sm text-[#0F3A5D]">MADAD PAKISTAN OFFICIAL TAX RECEIPT</span>
                 </div>
                 <span className="font-mono text-stone-500">{receiptId}</span>
               </div>

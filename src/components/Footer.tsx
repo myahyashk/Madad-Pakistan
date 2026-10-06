@@ -44,7 +44,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate, onOpen
             >
               <span className="text-[#38BDF8] text-2xl" aria-hidden="true">≋</span>
               <span className="text-2xl font-serif font-bold text-white tracking-tight">
-                {isUr ? 'فلڈ ایڈز پاکستان' : 'FloodAids Pakistan'}
+                {isUr ? 'مدد پاکستان' : 'MADAD PAKISTAN'}
               </span>
             </button>
             

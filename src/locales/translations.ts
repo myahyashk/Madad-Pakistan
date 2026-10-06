@@ -164,7 +164,7 @@ export const translations: Record<Language, Translations> = {
     hero: {
       tag: 'Pakistan Emergency Relief · Rural Rehousing & Flood Protection',
       title: 'Rebuilding Dignified, Elevated Homes for Rural Families Across Flood-Hit Pakistan.',
-      description: 'When monsoon deluges and mountain hill torrents (Rod-Kohi) strike, thousands of rural mud-brick (katcha) homes dissolve in hours, leaving agrarian families stranded on canal embankments with their livestock. FloodAids Pakistan rapidly builds 3-meter elevated timber and bamboo stilt shelters to keep rural children, elders, and cattle safe above the water.',
+      description: 'When monsoon deluges and mountain hill torrents (Rod-Kohi) strike, thousands of rural mud-brick (katcha) homes dissolve in hours, leaving agrarian families stranded on canal embankments with their livestock. Madad Pakistan rapidly builds 3-meter elevated timber and bamboo stilt shelters to keep rural children, elders, and cattle safe above the water.',
       stat1Val: '48,200+',
       stat1Label: 'Villagers Rehoused',
       stat2Val: '8,450',
@@ -183,7 +183,7 @@ export const translations: Record<Language, Translations> = {
       sponsorBtn: 'Sponsor Rural Shelter',
       displacedQuestion: 'Has your home been destroyed by recent rains or floods?',
       requestRehousingBtn: 'Request Emergency Rehousing (امداد کی درخواست)',
-      caption: 'Fig. 1 — Community construction of raised rural bamboo shelters, Sindh. FloodAids Archives.'
+      caption: 'Fig. 1 — Community construction of raised rural bamboo shelters, Sindh. MADAD PAKISTAN Archives.'
     },
     achievements: {
       badge: 'Field Milestones & Ground Impact',
@@ -223,7 +223,7 @@ export const translations: Record<Language, Translations> = {
     shelters: {
       badge: 'Indigenous Flood Engineering for Rural Pakistan',
       title: 'The 3-Phase Rural Rehousing Blueprint',
-      description: 'Traditional mud (katcha) houses liquefy into mud during flash deluges. FloodAids engineers elevated timber-and-bamboo Machan structures built 3 meters above historic high-water contours.',
+      description: 'Traditional mud (katcha) houses liquefy into mud during flash deluges. Madad Pakistan engineers elevated timber-and-bamboo Machan structures built 3 meters above historic high-water contours.',
       phase1: 'Phase 01: 48-Hour Rapid Chhappar Kit',
       phase2: 'Phase 02: Elevated Bamboo Stilt Haven (Machan)',
       phase3: 'Phase 03: Resilient Pakka Raised Cottage',
@@ -237,7 +237,7 @@ export const translations: Record<Language, Translations> = {
     ledger: {
       badge: 'Public Financial Accountability (Pakistan)',
       title: 'Public Aid Disbursement & Material Ledger',
-      description: 'Every Pakistani Rupee (PKR) contributed to FloodAids is itemized and linked to verified field delivery manifests audited by Provincial Disaster Management Authorities (PDMAs) and humanitarian partners.',
+      description: 'Every Pakistani Rupee (PKR) contributed through Madad Pakistan is itemized and linked to verified field delivery manifests audited by provincial disaster management authorities and humanitarian partners.',
       allocation: '88% Direct Rehousing Materials & Local Village Wages',
       searchPlaceholder: 'Search by Pakistan district, receipt, auditor...',
       disbursed: 'Disbursed (PKR)',
@@ -265,13 +265,13 @@ export const translations: Record<Language, Translations> = {
       workerB: 'Worker B (PDMA Mobile)'
     },
     footer: {
-      desc: 'FloodAids Pakistan is a dedicated humanitarian disaster relief and flood-resilient rehousing foundation. We construct elevated bamboo and timber stilt homes for rural families displaced by monsoon floods across rural Pakistan.',
+      desc: 'Madad Pakistan is a dedicated humanitarian disaster relief and flood-resilient rehousing platform. We connect families with verified support, emergency shelter, and transparent community assistance across Pakistan.',
       quickLinks: 'Navigation Pages',
       fieldDesks: 'Pakistan Field Desks',
       subscribeTitle: 'Pakistan Flood Bulletins',
       subscribeDesc: 'Receive verified situation bulletins and monsoon water drainage reports from rural field coordinators.',
       subscribeBtn: 'Subscribe to Relief Updates',
-      rights: '© 2026 FloodAids Pakistan Foundation. All rights reserved. Relief distributed strictly on merit without discrimination.'
+      rights: '© 2026 MADAD PAKISTAN. All rights reserved. Relief distributed strictly on merit without discrimination.'
     }
   },
   ur: {

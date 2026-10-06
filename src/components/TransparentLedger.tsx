@@ -38,7 +38,7 @@ export const TransparentLedger: React.FC = () => {
               Public Aid Disbursement & Material Ledger
             </h2>
             <p className="text-stone-600 text-sm sm:text-base font-sans">
-              Every Pakistani Rupee (PKR) contributed to FloodAids is itemized and linked to verified field delivery manifests audited by Provincial Disaster Management Authorities (PDMAs) and humanitarian partners.
+              Every Pakistani Rupee (PKR) contributed through Madad Pakistan is itemized and linked to verified field delivery manifests audited by provincial disaster management authorities and humanitarian partners.
             </p>
           </div>
 

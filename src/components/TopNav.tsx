@@ -89,16 +89,16 @@ export const TopNav: React.FC<TopNavProps> = ({
           
           {/* Brand Logo & Wordmark */}
           <div className="flex items-center gap-2">
-            {user && <button
+            <button
               onClick={() => handleNavClick('home')}
               className="text-xl sm:text-2xl font-serif font-bold tracking-tight text-[#0F3A5D] hover:opacity-90 transition-opacity flex items-center gap-1.5 whitespace-nowrap cursor-pointer"
             >
               <span className="text-[#0284C7] text-xl" aria-hidden="true">≋</span>
-              <span>{isUr ? 'فلڈ ایڈز' : 'FloodAids'}</span>
+              <span>{isUr ? 'مدد پاکستان' : 'MADAD PAKISTAN'}</span>
               <span className="text-[11px] font-sans font-semibold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200/60 ml-0.5">
-                {isUr ? 'پاکستان' : 'Pakistan'}
+                {isUr ? 'پیشہ ورانہ' : 'PRO' }
               </span>
-            </button>}
+            </button>
           </div>
 
           {/* Minimal Controls: Language Switcher + Donate PKR + Menu Button */}
@@ -167,8 +167,13 @@ export const TopNav: React.FC<TopNavProps> = ({
               <div className="p-4 sm:p-5 border-b border-[#E8E4DA] flex items-center justify-between bg-white/70">
                 <div className="flex items-center gap-2">
                   <span className="text-[#0284C7] text-xl" aria-hidden="true">≋</span>
-                  <div className="font-serif font-bold text-lg text-[#0F3A5D]">
-                    {isUr ? 'فلڈ ایڈز پاکستان' : 'FloodAids Pakistan'}
+                  <div className="flex flex-col">
+                    <div className="font-serif font-bold text-lg text-[#0F3A5D]">
+                      {isUr ? 'مدد پاکستان' : 'MADAD PAKISTAN'}
+                    </div>
+                    <div className="text-[10px] uppercase tracking-[0.16em] text-stone-500">
+                      {isUr ? 'مدد لوگوں تک پہنچاتی ہے' : 'Connecting Help With People Who Need It'}
+                    </div>
                   </div>
                 </div>
 
@@ -301,7 +306,7 @@ export const TopNav: React.FC<TopNavProps> = ({
               </div>
 
               <div className="text-[10px] text-stone-400 text-center font-mono">
-                FloodAids Pakistan · FBR NTN #4928172-1 · SECP Reg.
+                MADAD PAKISTAN · Connecting Help With People Who Need It
               </div>
             </div>
 

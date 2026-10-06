@@ -48,12 +48,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDonate, onOpenAi
             
             {/* Unboxed category / date metadata */}
             <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#0F3A5D]/90">
-              <span className="text-emerald-800 font-bold">{isUr ? 'پاکستان ایمرجنسی فلڈ ریلیف' : 'Pakistan Emergency Relief'}</span>
+              <span className="text-emerald-800 font-bold">{isUr ? 'مدد پاکستان' : 'MADAD PAKISTAN'}</span>
               <span aria-hidden="true">·</span>
-              <span>{isUr ? 'دیہی آبادکاری و تحفظ' : 'Rural Rehousing & Flood Protection'}</span>
+              <span>{isUr ? 'دیہی امداد اور تحفظ' : 'Relief Support & Protection'}</span>
               <span aria-hidden="true">·</span>
               <span>{isUr ? 'سندھ · بلوچستان · جنوبی پنجاب · کے پی کے' : 'Sindh · Balochistan · South Punjab · KP'}</span>
             </div>
+
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#0F3A5D]/70">
+              {isUr ? 'مدد لوگوں تک پہنچاتی ہے' : 'Connecting Help With People Who Need It'}
+            </p>
 
             <h1 className="text-3xl sm:text-5xl lg:text-[3.2rem] font-serif font-bold text-[#0F3A5D] leading-[1.2] tracking-tight text-balance">
               {t.hero.title}
@@ -203,7 +207,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDonate, onOpenAi
             {/* Curatorial Caption */}
             <div className="flex items-center justify-between text-xs text-stone-500 italic px-1">
               <span>{isUr ? 'شکل 1 — سندھ کے سیلاب زدہ علاقے میں ریلیف اور مچان گھروں کی تعمیر۔' : 'Fig. 1 — Community flood rescue and stilt haven deployment, Sindh.'}</span>
-              <span className="not-italic text-[11px] text-stone-400">FloodAids Pakistan Archives</span>
+              <span className="not-italic text-[11px] text-stone-400">MADAD PAKISTAN Archives</span>
             </div>
           </div>
 
